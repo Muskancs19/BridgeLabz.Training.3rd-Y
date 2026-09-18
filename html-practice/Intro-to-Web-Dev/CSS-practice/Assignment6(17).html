@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Submission</title>
+</head>
+<body>
+
+    <h1>Simple Form</h1>
+
+    <!-- Form loads the result message into the iframe -->
+    <form action="data:text/html,<h1>Form%20successfully%20submitted.</h1>"
+          method="get"
+          target="resultFrame">
+
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" name="name">
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <br>
+
+    <!-- Result is displayed here after submitting -->
+    <iframe
+        name="resultFrame"
+        width="80%"
+        height="200"
+        title="Form Result">
+    </iframe>
+
+</body>
+</html>
